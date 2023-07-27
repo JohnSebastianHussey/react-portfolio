@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/JohnSebastianHussey/react-portfolio/static/css/main.b6e61c98.css",
+    "main.js": "/JohnSebastianHussey/react-portfolio/static/js/main.730c23e0.js",
+    "index.html": "/JohnSebastianHussey/react-portfolio/index.html",
+    "main.b6e61c98.css.map": "/JohnSebastianHussey/react-portfolio/static/css/main.b6e61c98.css.map",
+    "main.730c23e0.js.map": "/JohnSebastianHussey/react-portfolio/static/js/main.730c23e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6e61c98.css",
+    "static/js/main.730c23e0.js"
+  ]
+}
