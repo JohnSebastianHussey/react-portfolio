@@ -1,12 +1,26 @@
 import { FunctionComponent } from "react";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import { PageContainer, ContentWrapper, DetailsContent, AnimatedLink, DetailsContentImage, DetailsContentParagraph } from "../Global.styled";
-import AudioEmbed from "../components/AudioEmbed/AudioEmbed";
+import { DetailsContent, AnimatedLink, DetailsContentImage, DetailsContentParagraph } from "../Global.styled";
+import AudioEmbed, { AudioEmbedProps } from "../components/AudioEmbed/AudioEmbed";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 
 
 export const NptGeneratorDetails: FunctionComponent = () => {
+
+    const demos: AudioEmbedProps[] = [
+        {
+            title: "1. Flanged Pulses:",
+            src: "audio/pulses1.mp3",
+        },
+        {
+            title: "2. Tones and pulses:",
+            src: "audio/tones.mp3",
+        },
+        {
+            title: "3. Spatialised Pulses:",
+            src: "audio/pulses2.mp3",
+        },
+    ];
     return (
         <PageWrapper>
             <Header />
@@ -22,7 +36,6 @@ export const NptGeneratorDetails: FunctionComponent = () => {
                         host environments such as Ableton and Bitwig.
                     </DetailsContentParagraph>
                     <DetailsContentImage src="img/npt-generator.png" alt="Image description" />
-                    <AudioEmbed></AudioEmbed>
                 </section>
                 <section>
                     <h3>Features and Functionality
@@ -53,9 +66,15 @@ export const NptGeneratorDetails: FunctionComponent = () => {
                         pulse
                         trains that have a zero or small duration between each pulse, so that the pulse train is
                         experienced
-                        as a continuous tone. This is a shortcut to offering a larger sonic palette.
-
+                        as a continuous tone. This is a shortcut to offering a larger sonic palette. Some expamples of the sounds available:
                     </DetailsContentParagraph>
+                    <>
+                        {demos.map(({ title, src }) => {
+                            return (
+                                <AudioEmbed src={src} title={title} key={title}></AudioEmbed>
+                            )
+                        })}
+                    </>
                 </section>
                 <section>
                     <h3>Technical Overview

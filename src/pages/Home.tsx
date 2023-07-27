@@ -19,13 +19,13 @@ export const Home: FunctionComponent = () => {
         {
             title: "NPT-Generator: Pulse Train VST",
             img: "img/npt-generator.png",
-            link: "npt-generator",
+            link: "#/npt-generator",
             altText: "Pulse Generator VST"
         },
         {
             title: "Foreverbeats: iOS groovebox",
             img: "img/fb.png",
-            link: "foreverbeats",
+            link: "#/foreverbeats",
             altText: "iOS Groove box"
         }
     ];

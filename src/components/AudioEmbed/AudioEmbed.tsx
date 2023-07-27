@@ -1,13 +1,19 @@
-import React, { FC } from 'react';
-import { AudioEmbedIFrame, AudioEmbedWrapper, AudioEmbedLink } from './AudioEmbed.styled';
+import { FC } from 'react';
+import { AudioLabel, StyledAudio } from './AudioEmbed.styled';
 
-interface AudioEmbedProps { }
+export interface AudioEmbedProps {
+   src: string;
+   title: string;
+}
 
-const AudioEmbed: FC<AudioEmbedProps> = () => (
-   <AudioEmbedWrapper>
-      <AudioEmbedIFrame src="https://audio.com/embed/audio/1750782890924436?theme=light"></AudioEmbedIFrame>
-      <AudioEmbedLink href='https://audio.com/william-woodcleft-wilderness-journeys'>@william-woodcleft-wilderness-journeys</AudioEmbedLink>
-   </AudioEmbedWrapper>
+const AudioEmbed: FC<AudioEmbedProps> = ({ title, src }) => (
+   <>
+      <AudioLabel>{title}</AudioLabel>
+      <StyledAudio controls>
+         <source src={src} type="audio/mpeg" />
+      </StyledAudio>
+
+   </>
 );
 
 export default AudioEmbed;

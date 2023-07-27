@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import { Home } from './pages/Home';
@@ -11,7 +11,7 @@ import { ForeverBeatsDetails } from './pages/ForeverBeats';
 import { NptGeneratorDetails } from './pages/NptGenerator';
 
 
-let router = createBrowserRouter([
+let router = createHashRouter([
   {
     path: "/",
     element: <Home />,
