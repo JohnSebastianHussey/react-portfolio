@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@typescript/lib-dom": "npm:@types/web@^0.0.111",
     "gh-pages": "^5.0.0"
   }
 }

@@ -60,17 +60,23 @@ export const CardGrid = styled.div`
 export const DetailsContent = styled.div`
     max-width: 620px;
     margin: 0 auto;
-    line-height: 1.6;
 `
 
 export const DetailsContentParagraph = styled.div`
     margin-bottom: 1rem;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 1.2rem;
     font-weight: 300;
+    font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    h4 {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+`
+
+export const BorderedBox = styled.div`
+    border: 1px dotted black;
+    padding: 16px;
 `
 
 export const DetailsContentImage = styled.img`

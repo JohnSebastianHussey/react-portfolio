@@ -9,7 +9,7 @@ import {
 import { Home } from './pages/Home';
 import { ForeverBeatsDetails } from './pages/ForeverBeats';
 import { NptGeneratorDetails } from './pages/NptGenerator';
-
+import { MicrosoundDelay } from './pages/MicrosoundDelay';
 
 let router = createHashRouter([
   {
@@ -23,6 +23,10 @@ let router = createHashRouter([
   {
     path: "/npt-generator",
     element: <NptGeneratorDetails />
+  },
+  {
+    path: "/microsound-delay",
+    element: <MicrosoundDelay />
   }
 ]);
 

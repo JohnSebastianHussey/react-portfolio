@@ -1,7 +1,6 @@
 import { FunctionComponent } from "react";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import { PageContainer, ContentWrapper, Container, CardGrid, AnimatedLink } from "../Global.styled";
+import { Container, CardGrid, AnimatedLink } from "../Global.styled";
 import ImageLink from "../components/ImageLink/ImageLink";
 import { TitleSubtext } from "../components/Header/Header.styled";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
@@ -21,6 +20,12 @@ export const Home: FunctionComponent = () => {
             img: "img/npt-generator.png",
             link: "#/npt-generator",
             altText: "Pulse Generator VST"
+        },
+        {
+            title: "Microsound Delay VST",
+            img: "img/microsound-delay.png",
+            link: "#/microsound-delay",
+            altText: "microsound delay"
         },
         {
             title: "Foreverbeats: iOS groovebox",

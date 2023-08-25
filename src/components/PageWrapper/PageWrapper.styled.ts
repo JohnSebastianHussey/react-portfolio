@@ -4,8 +4,8 @@ export const PageContainer = styled.div`
     position: relative;
     min-height: 100vh;
     @media (max-width: 1200px) {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
     }
     
 `;

@@ -11,6 +11,9 @@ export const TitleBanner = styled.div`
 export const TitleSubtext = styled.div`
     max-width: 620px;
     margin: 0 auto;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.6;
 `;
 
 export const TitleHeader = styled.h2`

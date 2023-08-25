@@ -1,9 +1,20 @@
 import { FunctionComponent } from "react";
 import Header from "../components/Header/Header";
-import { DetailsContent, AnimatedLink, DetailsContentImage, DetailsContentParagraph } from "../Global.styled";
+import { DetailsContent, AnimatedLink, DetailsContentImage, DetailsContentParagraph, BorderedBox } from "../Global.styled";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
+import AudioEmbed, { AudioEmbedProps } from "../components/AudioEmbed/AudioEmbed";
 
 export const ForeverBeatsDetails: FunctionComponent = () => {
+    const demos: AudioEmbedProps[] = [
+        {
+            title: "1. Drone voice with granular processing",
+            src: "audio/demo b.mp3",
+        },
+        {
+            title: "2. Groove",
+            src: "audio/demo c.mp3",
+        },
+    ];
     return (
         <PageWrapper>
             <Header />
@@ -44,8 +55,15 @@ export const ForeverBeatsDetails: FunctionComponent = () => {
                         range of
                         textural and melodic sounds. The sequencer featured a custom beat shuffling option, allowing
                         the
-                        user to algorithmically generate beat variations during live performance.
+                        user to algorithmically generate beat variations during live performance. Some audio examples below:
                     </DetailsContentParagraph>
+                    <BorderedBox>
+                        {demos.map(({ title, src }) => {
+                            return (
+                                <AudioEmbed src={src} title={title} key={title}></AudioEmbed>
+                            )
+                        })}
+                    </BorderedBox>
                 </section>
             </DetailsContent>
         </PageWrapper>
